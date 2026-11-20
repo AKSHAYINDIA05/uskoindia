@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universe Shotokan Karate Organisation, India | 3,000+ Championship Medals</title>
+  <meta name="description" content="India's premier martial arts institution. 3,000+ national and international medals, 40+ trophies. Authentic Shotokan Karate, elite Kickboxing, and specialized athletic conditioning.">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Universe Shotokan Karate Organisation, India | 3,000+ Championship Medals">
+  <meta property="og:description" content="India's premier martial arts institution. 3,000+ national and international medals, 40+ trophies. Authentic Shotokan Karate and elite Kickboxing.">
+  <meta property="og:image" content="logo.jpg">
+  
+  <link rel="icon" href="logo.jpg">
+  <link rel="preload" as="image" href="hero-bg.jpg" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- GSAP & ScrollTrigger for high-performance motion -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  
+  <script src="audio.js" defer></script>
+  <script src="canvas-fx.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="luxury-theme">
+
+  <!-- Custom Cursor for Luxury Precision -->
+  <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Physical Film Grain Texture Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- Ambient Luxury Canvas Layer -->
+  <canvas id="combat-canvas" aria-hidden="true"></canvas>
+
+  <!-- ======= CURATED PRELOADER ======= -->
+  <div id="preloader" role="dialog" aria-modal="true" aria-label="Loading Universe Shotokan Karate Organisation">
+    <div class="preloader-overlay"></div>
+    <div class="preloader-content">
+      <div class="preloader-kanji" aria-hidden="true">空手道</div>
+      <div class="preloader-emblem">
+        <img src="logo.jpg" alt="Universe Shotokan Karate Organisation crest" width="120" height="120" class="preloader-logo">
+      </div>
+      <span class="preloader-eyebrow">ESTABLISHED MARTIAL INSTITUTION</span>
+      <h2 class="preloader-brand">UNIVERSE SHOTOKAN KARATE ORGANISATION</h2>
+      <p class="preloader-sub">INDIA &bull; NATIONAL &amp; INTERNATIONAL ACCREDITATION</p>
+      
+      <div class="preloader-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <span class="progress-text" id="progress-counter">0%</span>
+      </div>
+
+      <div class="preloader-audio-prompt">
+        <button type="button" class="btn btn-audio-enter" id="btn-enter-sound">
+          <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <span>Enter With Audio (Atmospheric)</span>
+        </button>
+        <button type="button" class="btn btn-audio-skip" id="btn-enter-silent">
+          Enter Silently
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= EDITORIAL HEADER ======= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-identity" aria-label="Universe Shotokan Karate Organisation Home">
+        <div class="brand-crest">
+          <img src="logo.jpg" alt="USKO India Official Seal" width="46" height="46" class="brand-logo" fetchpriority="high">
+        </div>
+        <div class="brand-meta">
+          <span class="brand-title">USKO <span class="gold-accent">INDIA</span></span>
+          <span class="brand-desc">EST. SHOTOKAN ACADEMY</span>
+        </div>
+      </a>
+
+      <!-- Action Cluster: Sound Toggle, Enrollment CTA & Luxury Side Menu Trigger -->
+      <div class="header-actions">
+        <!-- Minimalist Audio Toggle Button -->
+        <button type="button" class="audio-toggle-btn" id="audio-toggle" aria-label="Toggle ambient soundscape" aria-pressed="false">
+          <span class="sound-bars" aria-hidden="true">
+            <span class="sound-bar bar-1"></span>
+            <span class="sound-bar bar-2"></span>
+            <span class="sound-bar bar-3"></span>
+            <span class="sound-bar bar-4"></span>
+          </span>
+          <span class="sound-label" id="sound-label">SOUND</span>
+        </button>
+
+        <a href="#enroll" class="btn btn-header-cta nav-cta-btn">
+          <span>ENROLLMENT</span>
+        </a>
+
+        <!-- Luxury Side Menu Trigger Button -->
+        <button type="button" class="side-menu-trigger" id="menu-trigger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="side-menu">
+          <span class="menu-trigger-text">MENU</span>
+          <span class="menu-trigger-icon" aria-hidden="true">
+            <span class="trigger-bar bar-top"></span>
+            <span class="trigger-bar bar-bot"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= PREMIUM SIDE ANIMATED MENU ======= -->
+  <div class="side-menu-overlay" id="menu-overlay" aria-hidden="true"></div>
+  <aside class="side-menu-drawer" id="side-menu" role="dialog" aria-modal="true" aria-label="Site Navigation" aria-hidden="true">
+    <div class="side-menu-inner">
+      <div class="side-menu-header">
+        <div class="side-menu-brand">
+          <img src="logo.jpg" alt="USKO India Official Crest" width="38" height="38" class="side-menu-logo" loading="lazy">
+          <span class="side-menu-brand-name">USKO <span class="gold-accent">INDIA</span></span>
+        </div>
+        <button type="button" class="side-menu-close" id="menu-close" aria-label="Close navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="side-menu-kanji-bg" aria-hidden="true">武道</div>
+
+      <nav class="side-menu-nav" aria-label="Side Navigation">
+        <ul class="side-nav-links">
+          <li class="side-nav-item">
+            <a href="#about" class="side-nav-link" data-sound="swoosh">
+              <span class="nav-roman">01</span>
+              <span class="nav-title">Heritage &amp; Lineage</span>
+              <span class="nav-kanji">伝統</span>
+            </a>
+          </li>
+          <li class="side-nav-item">
+            <a href="#belts" class="side-nav-link" data-sound="swoosh">
+              <span class="nav-roman">02</span>
+              <span class="nav-title">Rank Syllabus (7 Belts)</span>
+              <span class="nav-kanji">段位</span>
+            </a>
+          </li>
+          <li class="side-nav-item">
+            <a href="#achievements" class="side-nav-link" data-sound="swoosh">
+              <span class="nav-roman">03</span>
+              <span class="nav-title">3,000+ Medals Archive</span>
+              <span class="nav-kanji">栄光</span>
+            </a>
+          </li>
+          <li class="side-nav-item">
+            <a href="#matcher" class="side-nav-link" data-sound="swoosh">
+              <span class="nav-roman">04</span>
+              <span class="nav-title">Discipline Consultation</span>
+              <span class="nav-kanji">診断</span>
+            </a>
+          </li>
+          <li class="side-nav-item">
+            <a href="#programs" class="side-nav-link" data-sound="swoosh">
+              <span class="nav-roman">05</span>
+              <span class="nav-title">Academic Disciplines</span>
+              <span class="nav-kanji">学科</span>
+            </a>
+          </li>
+          <li class="side-nav-item">
+            <a href="#schedule" class="side-nav-link" data-sound="swoosh">
+              <span class="nav-roman">06</span>
+              <span class="nav-title">Weekly Schedule</span>
+              <span class="nav-kanji">日程</span>
+            </a>
+          </li>
+          <li class="side-nav-item">
+            <a href="#workshops" class="side-nav-link" data-sound="swoosh">
+              <span class="nav-roman">07</span>
+              <span class="nav-title">Hosted Workshops</span>
+              <span class="nav-kanji">講習</span>
+            </a>
+          </li>
+          <li class="side-nav-item">
+            <a href="#testimonials" class="side-nav-link" data-sound="swoosh">
+              <span class="nav-roman">08</span>
+              <span class="nav-title">Voices of Honour</span>
+              <span class="nav-kanji">名誉</span>
+            </a>
+          </li>
+          <li class="side-nav-item">
+            <a href="#enroll" class="side-nav-link side-nav-enroll" data-sound="strike">
+              <span class="nav-roman">09</span>
+              <span class="nav-title">Official Admissions</span>
+              <span class="nav-arrow">&rarr;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="side-menu-footer">
+        <div class="side-menu-contact">
+          <p class="side-contact-line"><strong>Main Dojo:</strong> Central Arena, India</p>
+          <p class="side-contact-line"><strong>Admissions:</strong> admissions@uskoindia.com</p>
+        </div>
+        <a href="https://wa.me/919999999999?text=Hello%20USKO%20India,%20I%20would%20like%20to%20enquire%20about%20admissions." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-concierge btn-side-concierge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <span>WhatsApp Concierge</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======= HERO: CINEMATIC MARTIAL ENTRANCE ======= -->
+    <section class="hero-section" id="hero">
+      <!-- Full-Bleed High-Impact Atmospheric Photo Background -->
+      <div class="hero-bg-photo" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <!-- Watermark Japanese Kanji with Archival Depth -->
+      <div class="kanji-watermark kanji-left" aria-hidden="true">空手</div>
+      <div class="kanji-watermark kanji-right" aria-hidden="true">武道</div>
+
+      <div class="container hero-container">
+        <div class="hero-eyebrow anim-hero">
+          <span>Authentic Shotokan &bull; Nationally Accredited</span>
+        </div>
+
+        <h1 class="hero-main-heading anim-hero">
+          <span class="title-subhead">THE DISCIPLINE OF PERFECTION</span>
+          <span class="title-kinetic-line">FORGE YOUR INNER <em class="champagne-serif">WARRIOR</em></span>
+        </h1>
+
+        <!-- Hairline Red Divider -->
+        <div class="hairline-gold-divider anim-hero" aria-hidden="true"></div>
+
+        <p class="hero-statement anim-hero">
+          Universe Shotokan Karate Organisation (USKO) India. Where classical Japanese martial values meet world-class combat conditioning. Home to over <strong>3,000 national and international medalists</strong> and <strong>40 championship trophies</strong>.
+        </p>
+
+        <!-- Primary CTA Buttons -->
+        <div class="hero-cta-cluster anim-hero">
+          <a href="#enroll" class="btn btn-luxury-primary" data-sound="strike">
+            <span class="btn-text">Reserve Trial Session</span>
+            <svg class="btn-arrow-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#matcher" class="btn btn-luxury-secondary" data-sound="swoosh">
+            <span class="btn-text">Explore Disciplines</span>
+          </a>
+        </div>
+
+        <!-- Archival Stat Deck (Monolithic Minimalist Counter) -->
+        <div class="hero-stats-deck anim-hero">
+          <div class="stat-deck-card" data-counter="3000" data-suffix="+">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Championship Medals</div>
+            <div class="stat-sub">Gold &bull; Silver &bull; Bronze</div>
+          </div>
+          <div class="stat-deck-card" data-counter="40" data-suffix="+">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Tournament Trophies</div>
+            <div class="stat-sub">National &amp; International</div>
+          </div>
+          <div class="stat-deck-card" data-counter="15" data-suffix="+">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Years of Mastery</div>
+            <div class="stat-sub">Continuous Instruction</div>
+          </div>
+          <div class="stat-deck-card" data-counter="2000" data-suffix="+">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Athletes Graduated</div>
+            <div class="stat-sub">Youth &amp; Adults</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Understated Scroll Cue -->
+      <a href="#about" class="hero-scroll-cue" aria-label="Scroll to legacy section">
+        <span class="cue-text">THE HERITAGE</span>
+        <div class="cue-line" aria-hidden="true"></div>
+      </a>
+    </section>
+
+    <!-- ======= INFINITE MARQUEE RIBBON ======= -->
+    <div class="marquee-ribbon" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">DISCIPLINE <span class="marquee-dot">&bull;</span> HONOUR <span class="marquee-dot">&bull;</span> 3,000+ CHAMPIONSHIP MEDALS <span class="marquee-dot">&bull;</span> SHOTOKAN KARATE <span class="marquee-dot">&bull;</span> PRO KICKBOXING <span class="marquee-dot">&bull;</span> 押忍 <span class="marquee-dot">&bull;</span> USKO INDIA <span class="marquee-dot">&bull;</span> EXCELLENCE IN MARTIAL ARTS <span class="marquee-dot">&bull;</span></span>
+        <span class="marquee-item">DISCIPLINE <span class="marquee-dot">&bull;</span> HONOUR <span class="marquee-dot">&bull;</span> 3,000+ CHAMPIONSHIP MEDALS <span class="marquee-dot">&bull;</span> SHOTOKAN KARATE <span class="marquee-dot">&bull;</span> PRO KICKBOXING <span class="marquee-dot">&bull;</span> 押忍 <span class="marquee-dot">&bull;</span> USKO INDIA <span class="marquee-dot">&bull;</span> EXCELLENCE IN MARTIAL ARTS <span class="marquee-dot">&bull;</span></span>
+      </div>
+    </div>
+
+    <!-- ======= HERITAGE & PHILOSOPHY ======= -->
+    <section class="section-block heritage-section" id="about">
+      <div class="container">
+        <div class="section-title-wrap text-center gs-reveal">
+          <span class="eyebrow-tag">TRADITION &bull; HONOUR &bull; MASTERY</span>
+          <h2 class="editorial-title">AN UNBROKEN LINEAGE OF <em class="champagne-serif">EXCELLENCE</em></h2>
+          <p class="section-lead-para">Founded on the classical tenets of Master Gichin Funakoshi, USKO India nurtures complete practitioners &mdash; harmonizing bodily strength, mental clarity, and moral discipline.</p>
+        </div>
+
+        <div class="heritage-grid">
+          <!-- Left: Atmospheric Dojo Photography with Crest Inset -->
+          <div class="heritage-visual-col gs-reveal">
+            <div class="heritage-photo-frame" data-tilt>
+              <img src="dojo-atmosphere.jpg" alt="Universe Shotokan Karate Organisation Traditional Tatami Dojo" class="heritage-dojo-img" loading="lazy">
+              <div class="heritage-seal-badge">
+                <img src="logo.jpg" alt="Official Seal" width="42" height="42" class="heritage-seal-img" loading="lazy">
+                <div class="heritage-seal-text">
+                  <strong>USKO INDIA</strong>
+                  <span>ESTABLISHED ACADEMY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: 3 Institutional Pillars -->
+          <div class="heritage-content-col gs-reveal">
+            <div class="pillar-row">
+              <span class="pillar-roman">I</span>
+              <div class="pillar-details">
+                <h3>Perfection of Character</h3>
+                <p>Technique without moral grounding is hollow. We guide students from their first white belt bow to cultivate humility, poise under pressure, and reverence for family and society.</p>
+              </div>
+            </div>
+
+            <div class="pillar-row">
+              <span class="pillar-roman">II</span>
+              <div class="pillar-details">
+                <h3>Championship Pedigree (3,000+ Podiums)</h3>
+                <p>Our competition curriculum adheres to the rigorous standards of World Karate &amp; Kickboxing Federations. Our athletes consistently earn State, National, and Asian championship titles.</p>
+              </div>
+            </div>
+
+            <div class="pillar-row">
+              <span class="pillar-roman">III</span>
+              <div class="pillar-details">
+                <h3>Complete Combat Science</h3>
+                <p>Bridging century-old Shotokan Kata with modern full-contact Kickboxing striking mechanics, functional strength development, and tactical women's personal safety.</p>
+              </div>
+            </div>
+
+            <!-- Archival Quote Block -->
+            <blockquote class="archival-quote">
+              <p>&ldquo;Karate begins and ends with courtesy. The ultimate aim lies not in victory or defeat, but in the perfection of character.&rdquo;</p>
+              <cite>&mdash; Master Gichin Funakoshi, Father of Modern Karate</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= INTERACTIVE BELT PROGRESSION (ARCHIVAL SYLLABUS) ======= -->
+    <section class="section-block belt-archive-section" id="belts">
+      <div class="container">
+        <div class="section-title-wrap text-center gs-reveal">
+          <span class="eyebrow-tag">PROGRESSION &bull; CURRICULUM</span>
+          <h2 class="editorial-title">THE SEVEN RANKS OF <em class="champagne-serif">MASTERY</em></h2>
+          <p class="section-lead-para">Inspect the technical syllabus, kata forms, and philosophical milestones across our official Kyu and Dan belt grades.</p>
+        </div>
+
+        <!-- Archival Belt Selector Bar -->
+        <div class="belt-selector-nav gs-reveal" role="tablist" aria-label="Karate Belt Ranks">
+          <button type="button" class="belt-tab active" data-belt="white" role="tab" aria-selected="true" aria-controls="belt-panel">
+            <span class="belt-swatch swatch-white"></span>
+            <span class="belt-tab-name">White &bull; 9th Kyu</span>
+          </button>
+          <button type="button" class="belt-tab" data-belt="yellow" role="tab" aria-selected="false" aria-controls="belt-panel">
+            <span class="belt-swatch swatch-yellow"></span>
+            <span class="belt-tab-name">Yellow &bull; 8th Kyu</span>
+          </button>
+          <button type="button" class="belt-tab" data-belt="orange" role="tab" aria-selected="false" aria-controls="belt-panel">
+            <span class="belt-swatch swatch-orange"></span>
+            <span class="belt-tab-name">Orange &bull; 7th Kyu</span>
+          </button>
+          <button type="button" class="belt-tab" data-belt="green" role="tab" aria-selected="false" aria-controls="belt-panel">
+            <span class="belt-swatch swatch-green"></span>
+            <span class="belt-tab-name">Green &bull; 6th Kyu</span>
+          </button>
+          <button type="button" class="belt-tab" data-belt="blue" role="tab" aria-selected="false" aria-controls="belt-panel">
+            <span class="belt-swatch swatch-blue"></span>
+            <span class="belt-tab-name">Blue &bull; 4th Kyu</span>
+          </button>
+          <button type="button" class="belt-tab" data-belt="brown" role="tab" aria-selected="false" aria-controls="belt-panel">
+            <span class="belt-swatch swatch-brown"></span>
+            <span class="belt-tab-name">Brown &bull; 1st-3rd Kyu</span>
+          </button>
+          <button type="button" class="belt-tab" data-belt="black" role="tab" aria-selected="false" aria-controls="belt-panel">
+            <span class="belt-swatch swatch-black"></span>
+            <span class="belt-tab-name">Black &bull; 1st Dan Shodan</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Belt Detail Card -->
+        <div class="belt-detail-stage gs-reveal" id="belt-panel" role="tabpanel">
+          <div class="belt-visual-col">
+            <div class="realistic-belt-wrapper" id="belt-realistic-render">
+              <div class="belt-ribbon belt-color-white">
+                <span class="belt-embroidery">空手道 &bull; SHOTOKAN</span>
+              </div>
+            </div>
+            <div class="belt-kanji-watermark" id="belt-kanji" aria-hidden="true">始</div>
+          </div>
+
+          <div class="belt-info-col">
+            <div class="belt-badge-line">
+              <span class="belt-level-pill" id="belt-level-label">RANK: 9TH KYU (BEGINNER)</span>
+              <span class="belt-duration-pill" id="belt-duration-label">DURATION: 3-4 MONTHS</span>
+            </div>
+            <h3 class="belt-title" id="belt-title">White Belt (Shiro Obi) &mdash; The Blank Canvas</h3>
+            <p class="belt-philosophy" id="belt-philosophy">
+              "The white belt represents the blank slate, the freshly fallen snow where the warrior's journey first takes foot. Humility, respect, and foundational balance are born here."
+            </p>
+
+            <div class="belt-requirements-grid">
+              <div class="req-box">
+                <div class="req-header">
+                  <svg class="req-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <h4>Kata Requirements</h4>
+                </div>
+                <p id="belt-kata">Taikyoku Shodan (First Cause), fundamental stance alignments (Zenkutsu-dachi)</p>
+              </div>
+
+              <div class="req-box">
+                <div class="req-header">
+                  <svg class="req-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                  <h4>Kumite &amp; Striking</h4>
+                </div>
+                <p id="belt-kumite">Gohon Kumite (5-step pre-arranged sparring), Oi-zuki punch, Mae-geri kick</p>
+              </div>
+
+              <div class="req-box">
+                <div class="req-header">
+                  <svg class="req-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7 7 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7 7 0 0 1 11 5.07V5a1 1 0 0 1 2 0v.07A7 7 0 0 1 18.93 11H19a1 1 0 0 1 0 2h-.07A7 7 0 0 1 13 16.93z"></path></svg>
+                  <h4>Mental Demeanor</h4>
+                </div>
+                <p id="belt-mental">Dojo etiquette, bowing protocol (Rei), unwavering eye focus (Chakumoku)</p>
+              </div>
+
+              <div class="req-box">
+                <div class="req-header">
+                  <svg class="req-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <h4>Eligibility</h4>
+                </div>
+                <p id="belt-age">Children from age 5, Youth, and Adults</p>
+              </div>
+            </div>
+
+            <div class="belt-action-row">
+              <a href="#enroll" class="btn btn-luxury-primary" data-sound="strike">Commence Training at This Rank</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 3,000+ MEDALS & TROPHY VAULT ======= -->
+    <section class="section-block vault-section" id="achievements">
+      <div class="container">
+        <div class="section-title-wrap text-center gs-reveal">
+          <span class="eyebrow-tag">THE TROPHY ARCHIVE</span>
+          <h2 class="editorial-title">HALL OF <em class="champagne-serif">3,000+ MEDALS</em></h2>
+          <p class="section-lead-para">Four decades of competitive preeminence across State, National, Asian, and World martial arts tournaments.</p>
+        </div>
+
+        <div class="vault-curated-grid gs-reveal">
+          <!-- Monolithic Trophy Spotlight -->
+          <div class="vault-monolith-card" data-tilt>
+            <div class="monolith-laurel">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d4b577" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+            </div>
+            <div class="monolith-counter" data-counter="40" data-suffix="+">40+</div>
+            <h3 class="monolith-title">Championship Trophies</h3>
+            <p class="monolith-desc">Consecutive Best Academy designations across All-India Invitations, National Shotokan federations, and Asian Combat Games.</p>
+            <div class="monolith-tags">
+              <span>National Federation</span>
+              <span>All India Kumite</span>
+              <span>WAKO Kickboxing</span>
+              <span>Asian Open</span>
+            </div>
+          </div>
+
+          <!-- Archival Medal Registry -->
+          <div class="vault-registry-col">
+            <!-- Gold Card -->
+            <div class="registry-medal-card card-gold" data-tilt>
+              <div class="medal-tier-badge">
+                <span class="tier-dot dot-gold"></span>
+                <span>GOLD &bull; 1ST POSITION</span>
+              </div>
+              <div class="registry-card-content">
+                <div class="registry-counter" data-counter="1200" data-suffix="+">1,200+</div>
+                <div class="registry-text">
+                  <h4>National &amp; International Gold</h4>
+                  <p>Tournament champions in individual Kata, team Kata, and full-contact Kumite across multiple age and weight categories.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Silver Card -->
+            <div class="registry-medal-card card-silver" data-tilt>
+              <div class="medal-tier-badge">
+                <span class="tier-dot dot-silver"></span>
+                <span>SILVER &bull; 2ND POSITION</span>
+              </div>
+              <div class="registry-card-content">
+                <div class="registry-counter" data-counter="1000" data-suffix="+">1,000+</div>
+                <div class="registry-text">
+                  <h4>State &amp; National Silver</h4>
+                  <p>Distinguished finalists demonstrating supreme poise, speed, and technical precision at the highest championship levels.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bronze Card -->
+            <div class="registry-medal-card card-bronze" data-tilt>
+              <div class="medal-tier-badge">
+                <span class="tier-dot dot-bronze"></span>
+                <span>BRONZE &bull; 3RD POSITION</span>
+              </div>
+              <div class="registry-card-content">
+                <div class="registry-counter" data-counter="800" data-suffix="+">800+</div>
+                <div class="registry-text">
+                  <h4>Podium Bronze Honors</h4>
+                  <p>Consistent podium placements sustaining the academy's reputation across junior, youth, and senior weight divisions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Archival Tournament Credentials -->
+        <div class="vault-credentials-deck gs-reveal">
+          <div class="credential-box">
+            <span class="credential-scope">INTERNATIONAL</span>
+            <h4>Asian Martial Arts Cup</h4>
+            <p>14 podium finishes by junior squad members representing India with athletic honor.</p>
+          </div>
+          <div class="credential-box">
+            <span class="credential-scope">NATIONAL</span>
+            <h4>All-India Shotokan Nationals</h4>
+            <p>Overall Team Champions across three consecutive editions with 45+ individual gold honors.</p>
+          </div>
+          <div class="credential-box">
+            <span class="credential-scope">KICKBOXING</span>
+            <h4>State Full-Contact Tournament</h4>
+            <p>Clean sweep across both men's and women's kickboxing weight brackets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FULL-BLEED PARALLAX DIVIDER ======= -->
+    <div class="parallax-divider" style="background-image: url('training-action.jpg');" aria-hidden="true">
+      <div class="parallax-overlay"></div>
+      <div class="parallax-content gs-reveal">
+        <p class="parallax-quote">&ldquo;True victory is victory over oneself. A warrior knows no limits, only horizons to surpass.&rdquo;</p>
+        <span class="parallax-author">The USKO Warrior Creed</span>
+      </div>
+    </div>
+
+    <!-- ======= CURATED DISCIPLINE CONSULTATION (QUIZ) ======= -->
+    <section class="section-block matcher-section" id="matcher">
+      <div class="container">
+        <div class="section-title-wrap text-center gs-reveal">
+          <span class="eyebrow-tag">CURATED ASSESSMENT</span>
+          <h2 class="editorial-title">DISCIPLINE <em class="champagne-serif">CONSULTATION</em></h2>
+          <p class="section-lead-para">Complete a brief three-question consultation to receive a tailored program recommendation based on your goals and schedule.</p>
+        </div>
+
+        <div class="consultation-card-wrapper gs-reveal">
+          <div class="consultation-step-tracker" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3">
+            <div class="consultation-pip active" id="pip-1">01. Applicant Profile</div>
+            <div class="consultation-pip" id="pip-2">02. Primary Objective</div>
+            <div class="consultation-pip" id="pip-3">03. Weekly Schedule</div>
+          </div>
+
+          <div class="matcher-body" id="matcher-body">
+            <!-- Step 1 -->
+            <div class="matcher-step active" id="step-1">
+              <h3 class="matcher-question">Step 1: Who will be enrolling into the academy?</h3>
+              <div class="consultation-options-grid">
+                <button type="button" class="consultation-opt-card" data-target="group" data-val="kids">
+                  <span class="opt-number">A</span>
+                  <div class="opt-content">
+                    <strong>Youth &amp; Children (Ages 5 &ndash; 15)</strong>
+                    <p>Character development, posture alignment, confidence, and anti-bullying awareness.</p>
+                  </div>
+                </button>
+                <button type="button" class="consultation-opt-card" data-target="group" data-val="teens">
+                  <span class="opt-number">B</span>
+                  <div class="opt-content">
+                    <strong>Teens &amp; Young Competitors (Ages 16+)</strong>
+                    <p>Rigorous sparring, reflex conditioning, and formal tournament progression.</p>
+                  </div>
+                </button>
+                <button type="button" class="consultation-opt-card" data-target="group" data-val="adults">
+                  <span class="opt-number">C</span>
+                  <div class="opt-content">
+                    <strong>Adult Professionals &amp; Executives</strong>
+                    <p>Full-contact kickboxing, stress de-escalation, stamina, and body composition.</p>
+                  </div>
+                </button>
+                <button type="button" class="consultation-opt-card" data-target="group" data-val="women">
+                  <span class="opt-number">D</span>
+                  <div class="opt-content">
+                    <strong>Women &amp; Young Women</strong>
+                    <p>Dedicated personal safety tactics, leverage mechanics, and situational defense.</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="matcher-step" id="step-2">
+              <h3 class="matcher-question">Step 2: What is your primary training ambition?</h3>
+              <div class="consultation-options-grid">
+                <button type="button" class="consultation-opt-card" data-target="goal" data-val="karate">
+                  <span class="opt-number">A</span>
+                  <div class="opt-content">
+                    <strong>Classical Black Belt Journey</strong>
+                    <p>Formal belt grading, Kata precision, Olympic-style Kumite, and lifelong discipline.</p>
+                  </div>
+                </button>
+                <button type="button" class="consultation-opt-card" data-target="goal" data-val="kickboxing">
+                  <span class="opt-number">B</span>
+                  <div class="opt-content">
+                    <strong>Pro Kickboxing &amp; Dynamic Striking</strong>
+                    <p>Heavy bag conditioning, Dutch combination drills, and combat athleticism.</p>
+                  </div>
+                </button>
+                <button type="button" class="consultation-opt-card" data-target="goal" data-val="fitness">
+                  <span class="opt-number">C</span>
+                  <div class="opt-content">
+                    <strong>Functional Strength &amp; Fat Loss</strong>
+                    <p>High-caloric metabolic conditioning, mobility, and core rotational power.</p>
+                  </div>
+                </button>
+                <button type="button" class="consultation-opt-card" data-target="goal" data-val="safety">
+                  <span class="opt-number">D</span>
+                  <div class="opt-content">
+                    <strong>Tactical Self-Defence &amp; Safety</strong>
+                    <p>Instinctive escape techniques, vital-point defense, and boundary management.</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="matcher-step" id="step-3">
+              <h3 class="matcher-question">Step 3: What weekly schedule best accommodates your routine?</h3>
+              <div class="consultation-options-grid">
+                <button type="button" class="consultation-opt-card" data-target="schedule" data-val="regular">
+                  <span class="opt-number">A</span>
+                  <div class="opt-content">
+                    <strong>Regular Weekday Batches (3x Weekly)</strong>
+                    <p>Consistent, structured curriculum progression (Morning or Evening).</p>
+                  </div>
+                </button>
+                <button type="button" class="consultation-opt-card" data-target="schedule" data-val="weekend">
+                  <span class="opt-number">B</span>
+                  <div class="opt-content">
+                    <strong>Weekend Intensive (Saturday &amp; Sunday)</strong>
+                    <p>Comprehensive two-hour sessions for busy students and professionals.</p>
+                  </div>
+                </button>
+                <button type="button" class="consultation-opt-card" data-target="schedule" data-val="private">
+                  <span class="opt-number">C</span>
+                  <div class="opt-content">
+                    <strong>Private 1-on-1 Instruction</strong>
+                    <p>Dedicated Black Belt Master, custom schedule, and expedited belt eligibility.</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Result Recommendation -->
+            <div class="matcher-step" id="step-result">
+              <div class="curated-result-stage">
+                <span class="result-prescribed-badge">RECOMMENDED DISCIPLINE</span>
+                <h3 class="result-program-title" id="res-title">Kids Shotokan Karate &bull; Junior Academy</h3>
+                <p class="result-program-desc" id="res-desc">
+                  Based on your consultation, this curriculum provides the ideal combination of character cultivation, physical resilience, and formal belt rank progression.
+                </p>
+                <div class="result-features-list" id="res-features"></div>
+                <div class="result-action-row">
+                  <a href="#enroll" class="btn btn-luxury-primary" id="btn-claim-matcher">
+                    <span>Reserve Complimentary Trial</span> &rarr;
+                  </a>
+                  <button type="button" class="btn btn-luxury-secondary" id="btn-restart-matcher">
+                    Restart Consultation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ACADEMIC DISCIPLINES (EDITORIAL CARDS) ======= -->
+    <section class="section-block programs-section" id="programs">
+      <div class="container">
+        <div class="section-title-wrap text-center gs-reveal">
+          <span class="eyebrow-tag">ACCREDITED CURRICULUM</span>
+          <h2 class="editorial-title">ACADEMIC <em class="champagne-serif">DISCIPLINES</em></h2>
+          <p class="section-lead-para">Certified by national martial arts councils and instructed exclusively by credentialed Black Belt senseis.</p>
+        </div>
+
+        <div class="editorial-programs-grid gs-reveal">
+          <!-- Card 1: Featured Pro Kickboxing with High-Impact Imagery -->
+          <article class="editorial-program-card featured-program" data-tilt>
+            <div class="featured-seal">CHAMPIONSHIP SQUAD</div>
+            <div class="card-top-bar">
+              <span class="card-age">AGES 16+ &bull; ADULTS</span>
+              <span class="card-category">PRO COMBAT</span>
+            </div>
+            <h3 class="card-program-title">Adult Pro Kickboxing</h3>
+            <p class="card-program-desc">
+              Full-contact striking regime for men and women. Master combat combinations, condition your shins and core, and train like a professional athlete.
+            </p>
+            <ul class="card-curriculum-list">
+              <li>Dutch-style Kickboxing &amp; striking dynamics</li>
+              <li>Heavy bag drills, focus mitts &amp; ring strategy</li>
+              <li>Elite conditioning and stress alleviation</li>
+              <li>State and National tournament eligibility</li>
+            </ul>
+            <a href="#enroll" class="btn btn-luxury-primary btn-card-enroll" data-program="Adult Kickboxing">Join Adult Kickboxing &rarr;</a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="editorial-program-card" data-tilt>
+            <div class="card-top-bar">
+              <span class="card-age">AGES 5 &ndash; 15</span>
+              <span class="card-category">SHOTOKAN</span>
+            </div>
+            <h3 class="card-program-title">Youth Shotokan Karate</h3>
+            <p class="card-program-desc">
+              Develop discipline, focus, and peer-respect through traditional Shotokan Kata and Kumite. Our belt grading instills self-worth and anti-bullying confidence.
+            </p>
+            <ul class="card-curriculum-list">
+              <li>Classical Japan Shotokan syllabus</li>
+              <li>Official Dan and Kyu grade certification</li>
+              <li>District and National tournament pathways</li>
+              <li>Motor skills, focus, and posture correction</li>
+            </ul>
+            <a href="#enroll" class="btn btn-card-enroll" data-program="Kids Karate">Enroll in Youth Karate &rarr;</a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="editorial-program-card" data-tilt>
+            <div class="card-top-bar">
+              <span class="card-age">AGES 8 &ndash; 15</span>
+              <span class="card-category">KICKBOXING</span>
+            </div>
+            <h3 class="card-program-title">Youth Combat Kickboxing</h3>
+            <p class="card-program-desc">
+              High-intensity striking fundamentals in a safe, controlled environment. Enhances speed, reaction time, and cardiovascular health through mitts &amp; heavy bag work.
+            </p>
+            <ul class="card-curriculum-list">
+              <li>Striking biomechanics and defensive guard</li>
+              <li>Padded protective gear sparring drills</li>
+              <li>Cardiovascular stamina and footwork agility</li>
+              <li>Certified youth coaching protocols</li>
+            </ul>
+            <a href="#enroll" class="btn btn-card-enroll" data-program="Kids Kickboxing">Enroll in Youth Kickboxing &rarr;</a>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="editorial-program-card" data-tilt>
+            <div class="card-top-bar">
+              <span class="card-age">ALL AGES &bull; FITNESS</span>
+              <span class="card-category">ATHLETIC</span>
+            </div>
+            <h3 class="card-program-title">Strength &amp; Body Transformation</h3>
+            <p class="card-program-desc">
+              Martial arts inspired conditioning engineered for rapid caloric burn and lean muscle hypertrophy. Combines calisthenics, plyometrics, and combat intervals.
+            </p>
+            <ul class="card-curriculum-list">
+              <li>High-Intensity Martial Conditioning (HIMC)</li>
+              <li>Rotational core power and joint mobility</li>
+              <li>Post-workout metabolic elevation</li>
+              <li>Customized nutritional guidelines</li>
+            </ul>
+            <a href="#enroll" class="btn btn-card-enroll" data-program="Strength & Fat Loss">Join Strength &amp; Fat Loss &rarr;</a>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="editorial-program-card" data-tilt>
+            <div class="card-top-bar">
+              <span class="card-age">WOMEN &amp; TEENS</span>
+              <span class="card-category">TACTICAL</span>
+            </div>
+            <h3 class="card-program-title">Tactical Women's Safety</h3>
+            <p class="card-program-desc">
+              Specialized tactical self-defence. Practical, pressure-tested escapes against common physical threats, wrist grabs, choke holds, and ground pins.
+            </p>
+            <ul class="card-curriculum-list">
+              <li>Leverage-based defense (effective regardless of size)</li>
+              <li>Situational threat assessment &amp; boundary control</li>
+              <li>Instinctive striking against vulnerable targets</li>
+              <li>Psychological composure under duress</li>
+            </ul>
+            <a href="#enroll" class="btn btn-card-enroll" data-program="Women Safety">Join Women's Safety &rarr;</a>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="editorial-program-card" data-tilt>
+            <div class="card-top-bar">
+              <span class="card-age">CUSTOM &bull; 1-ON-1</span>
+              <span class="card-category">EXECUTIVE</span>
+            </div>
+            <h3 class="card-program-title">Private 1-on-1 Masterclass</h3>
+            <p class="card-program-desc">
+              Private coaching with Senior Black Belt Masters. Tailored biomechanics, accelerated syllabus, tournament strategy, or executive fitness.
+            </p>
+            <ul class="card-curriculum-list">
+              <li>Individualized instruction with Chief Sensei</li>
+              <li>Video analysis of Kata and striking posture</li>
+              <li>Executive scheduling (Morning, Evening, Weekend)</li>
+              <li>Fast-track belt examination qualification</li>
+            </ul>
+            <a href="#enroll" class="btn btn-card-enroll" data-program="Personal Training">Reserve Private Masterclass &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= DOJO WEEKLY TIMETABLE ======= -->
+    <section class="section-block schedule-section" id="schedule">
+      <div class="container">
+        <div class="section-title-wrap text-center gs-reveal">
+          <span class="eyebrow-tag">WEEKLY TIMETABLE</span>
+          <h2 class="editorial-title">TRAINING <em class="champagne-serif">SCHEDULE</em></h2>
+          <p class="section-lead-para">Morning and evening cohorts structured to support academic commitments and executive schedules.</p>
+        </div>
+
+        <div class="schedule-filter-bar gs-reveal" role="tablist" aria-label="Schedule Filter">
+          <button type="button" class="sched-filter-btn active" data-filter="all">All Sessions</button>
+          <button type="button" class="sched-filter-btn" data-filter="kids">Youth Batches</button>
+          <button type="button" class="sched-filter-btn" data-filter="adults">Adult Batches</button>
+          <button type="button" class="sched-filter-btn" data-filter="kickboxing">Kickboxing</button>
+          <button type="button" class="sched-filter-btn" data-filter="safety">Women's Safety</button>
+        </div>
+
+        <div class="timetable-grid gs-reveal">
+          <!-- Mon/Wed/Fri Batches -->
+          <div class="timetable-day-card" data-category="kids karate">
+            <div class="day-header">
+              <span class="day-name">MON / WED / FRI</span>
+              <span class="day-badge kids-badge">YOUTH</span>
+            </div>
+            <div class="batch-slot">
+              <span class="batch-time">04:30 PM &ndash; 05:45 PM</span>
+              <h4 class="batch-name">Junior Shotokan Karate (Foundations)</h4>
+              <p class="batch-instructor">Sensei R. Sharma &bull; Main Tatami Dojo</p>
+            </div>
+            <div class="batch-slot">
+              <span class="batch-time">06:00 PM &ndash; 07:15 PM</span>
+              <h4 class="batch-name">Senior Belt Kata &amp; Kumite Tactics</h4>
+              <p class="batch-instructor">Chief Instructor &bull; Arena I</p>
+            </div>
+          </div>
+
+          <!-- Tue/Thu/Sat Batches -->
+          <div class="timetable-day-card" data-category="adults kickboxing">
+            <div class="day-header">
+              <span class="day-name">TUE / THU / SAT</span>
+              <span class="day-badge adult-badge">ADULTS</span>
+            </div>
+            <div class="batch-slot">
+              <span class="batch-time">06:30 AM &ndash; 07:45 AM</span>
+              <h4 class="batch-name">Early Bird Pro Kickboxing &amp; Conditioning</h4>
+              <p class="batch-instructor">Coach V. Patel &bull; Heavy Bag Ring</p>
+            </div>
+            <div class="batch-slot">
+              <span class="batch-time">07:30 PM &ndash; 08:45 PM</span>
+              <h4 class="batch-name">Executive Combat &amp; Stress Alleviation</h4>
+              <p class="batch-instructor">Senior Coach &bull; Arena II</p>
+            </div>
+          </div>
+
+          <!-- Saturday Special -->
+          <div class="timetable-day-card" data-category="safety">
+            <div class="day-header">
+              <span class="day-name">SATURDAY</span>
+              <span class="day-badge comp-badge">SPECIALIZED</span>
+            </div>
+            <div class="batch-slot">
+              <span class="batch-time">10:00 AM &ndash; 12:00 PM</span>
+              <h4 class="batch-name">Tactical Women's Self-Defence Intensive</h4>
+              <p class="batch-instructor">Female Safety Specialist &bull; Studio B</p>
+            </div>
+            <div class="batch-slot">
+              <span class="batch-time">04:00 PM &ndash; 05:30 PM</span>
+              <h4 class="batch-name">Strength, Mobility &amp; Calisthenics</h4>
+              <p class="batch-instructor">Conditioning Faculty &bull; Performance Zone</p>
+            </div>
+          </div>
+
+          <!-- Sunday Squad -->
+          <div class="timetable-day-card" data-category="all karate kickboxing">
+            <div class="day-header">
+              <span class="day-name">SUNDAY &bull; OPEN MAT</span>
+              <span class="day-badge comp-badge">TOURNAMENT</span>
+            </div>
+            <div class="batch-slot">
+              <span class="batch-time">08:00 AM &ndash; 11:00 AM</span>
+              <h4 class="batch-name">Championship Squad Sparring &amp; Dan Prep</h4>
+              <p class="batch-instructor">Full Coaching Faculty &bull; All Arenas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= HOSTED WORKSHOPS ======= -->
+    <section class="section-block workshops-section" id="workshops">
+      <div class="container">
+        <div class="section-title-wrap text-center gs-reveal">
+          <span class="eyebrow-tag">CONTINUING EDUCATION</span>
+          <h2 class="editorial-title">HOSTED <em class="champagne-serif">WORKSHOPS</em></h2>
+          <p class="section-lead-para">Masterclasses conducted by visiting Grandmasters, open to both academy members and affiliated martial artists.</p>
+        </div>
+
+        <div class="workshops-editorial-grid gs-reveal">
+          <!-- Workshop 1 -->
+          <article class="workshop-editorial-card">
+            <div class="ws-calendar-block">
+              <span class="ws-day">15</span>
+              <span class="ws-month">DEC</span>
+              <span class="ws-time">09:00 AM</span>
+            </div>
+            <div class="ws-main-details">
+              <div class="ws-tag-cluster">
+                <span class="ws-tag tag-discipline">SHOTOKAN BUNKAI</span>
+                <span class="ws-tag tag-urgency">8 PLACES REMAINING</span>
+              </div>
+              <h3 class="ws-title">Advanced Black Belt Bunkai Masterclass</h3>
+              <p class="ws-desc">
+                An exhaustive exploration of practical combat applications embedded within classical Bassai Dai and Kanku Dai katas with 6th Dan Chief Sensei.
+              </p>
+              <div class="ws-meta-bar">
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Main Tatami Hall</span>
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 4 Hours Intensive</span>
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Official Certification</span>
+              </div>
+            </div>
+            <div class="ws-cta-block">
+              <button type="button" class="btn btn-luxury-primary btn-book-ws" data-ws-title="Advanced Black Belt Bunkai Masterclass">
+                Reserve Pass &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- Workshop 2 -->
+          <article class="workshop-editorial-card">
+            <div class="ws-calendar-block">
+              <span class="ws-day">22</span>
+              <span class="ws-month">DEC</span>
+              <span class="ws-time">10:00 AM</span>
+            </div>
+            <div class="ws-main-details">
+              <div class="ws-tag-cluster">
+                <span class="ws-tag tag-discipline">PRO KICKBOXING</span>
+                <span class="ws-tag tag-urgency">LIMITED REGISTRATION</span>
+              </div>
+              <h3 class="ws-title">WAKO-Standard Fight Camp &amp; Striking Biomechanics</h3>
+              <p class="ws-desc">
+                High-performance striking seminar covering low-kick power generation, switch-kick angles, ring generalship, and tournament point strategies.
+              </p>
+              <div class="ws-meta-bar">
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Arena I</span>
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 5 Hours Camp</span>
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Full Sparring Gear Required</span>
+              </div>
+            </div>
+            <div class="ws-cta-block">
+              <button type="button" class="btn btn-luxury-primary btn-book-ws" data-ws-title="WAKO-Standard Fight Camp">
+                Reserve Pass &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- Workshop 3 -->
+          <article class="workshop-editorial-card">
+            <div class="ws-calendar-block">
+              <span class="ws-day">05</span>
+              <span class="ws-month">JAN</span>
+              <span class="ws-time">10:00 AM</span>
+            </div>
+            <div class="ws-main-details">
+              <div class="ws-tag-cluster">
+                <span class="ws-tag tag-discipline">COMMUNITY SAFETY</span>
+                <span class="ws-tag tag-complimentary">COMPLIMENTARY ACCESS</span>
+              </div>
+              <h3 class="ws-title">Citywide Tactical Women's Safety Workshop</h3>
+              <p class="ws-desc">
+                Open to all women and teenage girls. Learn practical leverage escapes from wrist locks, rear chokeholds, and vehicle ambush situations.
+              </p>
+              <div class="ws-meta-bar">
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Main Hall</span>
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 2.5 Hours</span>
+                <span><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Open to Beginners</span>
+              </div>
+            </div>
+            <div class="ws-cta-block">
+              <button type="button" class="btn btn-luxury-primary btn-book-ws" data-ws-title="Citywide Tactical Women's Safety Workshop">
+                Claim Guest Pass &rarr;
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= TESTIMONIALS / ENDORSEMENTS ======= -->
+    <section class="section-block endorsements-section" id="testimonials">
+      <div class="container">
+        <div class="section-title-wrap text-center gs-reveal">
+          <span class="eyebrow-tag">TESTIMONIALS</span>
+          <h2 class="editorial-title">VOICES OF <em class="champagne-serif">HONOUR</em></h2>
+          <p class="section-lead-para">Reflections from parents observing profound developmental growth, and adult practitioners who transformed their capabilities.</p>
+        </div>
+
+        <div class="endorsements-matrix gs-reveal">
+          <blockquote class="endorsement-card" data-tilt>
+            <div class="endorsement-quote-mark" aria-hidden="true">&ldquo;</div>
+            <p>My eight-year-old son joined USKO reserved and timid. Within a year of structured training, he earned his first medal at the State Nationals. Beyond the medal, his academic focus, posture, and poise have transformed beyond measure.</p>
+            <footer>
+              <strong class="endorsement-name">Sunita Nair</strong>
+              <span class="endorsement-meta">Parent of Brown Belt Junior Competitor</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="endorsement-card" data-tilt>
+            <div class="endorsement-quote-mark" aria-hidden="true">&ldquo;</div>
+            <p>Managing executive stress led me to the Adult Kickboxing program. In eighteen months, I reversed chronic back pain and lost sixteen kilograms. The pedagogical standard here rivals any premier martial institution globally.</p>
+            <footer>
+              <strong class="endorsement-name">Arjun Mehta</strong>
+              <span class="endorsement-meta">Corporate Director &bull; Kickboxing Practitioner</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="endorsement-card" data-tilt>
+            <div class="endorsement-quote-mark" aria-hidden="true">&ldquo;</div>
+            <p>The Women's Safety Workshop imparted practical leverage techniques that gave me visceral peace of mind during late medical shifts. Every woman should undergo this empowering curriculum.</p>
+            <footer>
+              <strong class="endorsement-name">Dr. Radhika Sen</strong>
+              <span class="endorsement-meta">Physician &bull; Tactical Self-Defence Graduate</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ADMISSIONS ENQUIRY (EDITORIAL MINIMALIST FORM) ======= -->
+    <section class="section-block admissions-section" id="enroll">
+      <div class="container">
+        <div class="admissions-grid gs-reveal">
+          <!-- Left: Institutional Overview & Concierge -->
+          <div class="admissions-info-col">
+            <span class="eyebrow-tag">OFFICIAL ADMISSIONS</span>
+            <h2 class="admissions-heading">COMMENCE YOUR <em class="champagne-serif">TRAINING</em></h2>
+            <p class="admissions-lead">
+              Take the first step onto the tatami. Reserve a formal trial assessment with our Black Belt faculty.
+            </p>
+
+            <div class="guarantee-points">
+              <div class="guarantee-row">
+                <span class="guarantee-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                <div>
+                  <strong>Complimentary Trial Assessment</strong>
+                  <p>One full session including technical posture analysis and batch placement recommendation.</p>
+                </div>
+              </div>
+              <div class="guarantee-row">
+                <span class="guarantee-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                <div>
+                  <strong>Official National Accreditation</strong>
+                  <p>All belt rankings recognized by State and National Karate and Kickboxing federations.</p>
+                </div>
+              </div>
+              <div class="guarantee-row">
+                <span class="guarantee-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                <div>
+                  <strong>No Long-Term Lock-In</strong>
+                  <p>Flexible quarterly or seasonal membership options.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Concierge WhatsApp Box -->
+            <div class="concierge-box">
+              <div class="concierge-body">
+                <h4>Prefer Direct Concierge Assistance?</h4>
+                <p>Connect with our Chief Admissions Officer for immediate scheduling, sibling discounts, and fee structures.</p>
+                <a href="https://wa.me/919999999999?text=Hello%20USKO%20India,%20I%20would%20like%20to%20enquire%20about%20admissions." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-concierge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  <span>WhatsApp Concierge</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Minimalist Luxury Form -->
+          <div class="admissions-form-col">
+            <form class="luxury-form" id="enroll-form" novalidate>
+              <div class="form-title-bar">
+                <span>OFFICIAL ADMISSION ENQUIRY</span>
+              </div>
+
+              <!-- Full Name -->
+              <div class="field-wrap">
+                <label for="student-name">Full Name of Applicant <span class="req">*</span></label>
+                <input type="text" id="student-name" name="student_name" required autocomplete="name" placeholder="e.g. Aarav Sharma" data-error="err-name">
+                <div class="field-error-msg" id="err-name" role="alert">Please provide applicant's full name.</div>
+              </div>
+
+              <!-- Contact Row -->
+              <div class="form-row-2">
+                <div class="field-wrap">
+                  <label for="student-phone">Contact Number <span class="req">*</span></label>
+                  <input type="tel" id="student-phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" data-error="err-phone">
+                  <div class="field-error-msg" id="err-phone" role="alert">Valid contact number required.</div>
+                </div>
+
+                <div class="field-wrap">
+                  <label for="student-email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="student-email" name="email" required autocomplete="email" placeholder="you@domain.com" data-error="err-email">
+                  <div class="field-error-msg" id="err-email" role="alert">Valid email address required.</div>
+                </div>
+              </div>
+
+              <!-- Age & Program Row -->
+              <div class="form-row-2">
+                <div class="field-wrap">
+                  <label for="student-age">Applicant Age <span class="req">*</span></label>
+                  <input type="number" id="student-age" name="age" min="4" max="80" required placeholder="e.g. 10" data-error="err-age">
+                  <div class="field-error-msg" id="err-age" role="alert">Minimum age requirement is 4.</div>
+                </div>
+
+                <div class="field-wrap">
+                  <label for="target-program">Discipline <span class="req">*</span></label>
+                  <select id="target-program" name="program" required data-error="err-prog">
+                    <option value="">Select a Discipline...</option>
+                    <option value="Youth Shotokan Karate (Ages 5-15)">Youth Shotokan Karate (Ages 5-15)</option>
+                    <option value="Youth Combat Kickboxing (Ages 8-15)">Youth Combat Kickboxing (Ages 8-15)</option>
+                    <option value="Adult Pro Kickboxing (Ages 16+)">Adult Pro Kickboxing (Ages 16+)</option>
+                    <option value="Strength & Fat Loss">Strength &amp; Fat Loss Conditioning</option>
+                    <option value="Tactical Women Safety">Tactical Women's Safety</option>
+                    <option value="Private Masterclass">Private 1-on-1 Masterclass</option>
+                  </select>
+                  <div class="field-error-msg" id="err-prog" role="alert">Please select a discipline.</div>
+                </div>
+              </div>
+
+              <!-- Preferred Timing -->
+              <div class="field-wrap">
+                <label for="pref-timing">Preferred Cohort Timing</label>
+                <select id="pref-timing" name="timing">
+                  <option value="Morning">Morning Batch (06:30 AM &ndash; 08:00 AM)</option>
+                  <option value="Evening" selected>Evening Batch (04:30 PM &ndash; 07:30 PM)</option>
+                  <option value="Weekend">Weekend Intensive (Saturday / Sunday)</option>
+                </select>
+              </div>
+
+              <!-- Notes -->
+              <div class="field-wrap">
+                <label for="student-notes">Prior Martial Arts Experience or Notes (Optional)</label>
+                <textarea id="student-notes" name="notes" rows="3" placeholder="Prior belt rank, fitness goals, or specific scheduling requests..."></textarea>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn btn-luxury-primary btn-submit-full" id="btn-submit-form" data-sound="strike">
+                <span class="btn-text">SUBMIT OFFICIAL ADMISSION ENQUIRY</span>
+                <span class="btn-subtext">Immediate SMS &amp; Email Dispatch</span>
+              </button>
+
+              <!-- Success Alert -->
+              <div class="form-submission-success" id="form-success-banner" role="status" aria-live="polite">
+                <div class="success-seal-hanko" aria-hidden="true">押忍</div>
+                <h3>ENQUIRY TRANSMITTED</h3>
+                <p>Welcome to the academy. Our Chief Admissions Officer will contact you within 24 hours to coordinate your trial assessment.</p>
+                <a href="#" class="btn btn-luxury-secondary btn-sm" id="btn-reset-form">Submit Additional Enquiry</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= CURATED FOOTER & DOJO KUN ======= -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Dojo Kun: The Five Martial Precepts -->
+      <div class="dojo-kun-card">
+        <h3 class="dojo-kun-heading">DOJO KUN &bull; <span>THE FIVE PRECEPTS OF SHOTOKAN</span></h3>
+        <div class="dojo-kun-grid">
+          <div class="kun-item"><span class="kun-kanji">一</span> Seek perfection of character</div>
+          <div class="kun-item"><span class="kun-kanji">一</span> Be faithful and sincere</div>
+          <div class="kun-item"><span class="kun-kanji">一</span> Endeavor to excel</div>
+          <div class="kun-item"><span class="kun-kanji">一</span> Respect and honor others</div>
+          <div class="kun-item"><span class="kun-kanji">一</span> Refrain from violent behavior</div>
+        </div>
+      </div>
+
+      <div class="footer-columns-grid">
+        <!-- Brand -->
+        <div class="footer-col brand-col">
+          <div class="footer-brand-header">
+            <img src="logo.jpg" alt="Universe Shotokan Karate Organisation Logo" width="56" height="56" loading="lazy">
+            <div>
+              <h4 class="footer-brand-title">UNIVERSE SHOTOKAN KARATE ORGANISATION</h4>
+              <p class="footer-brand-sub">INDIA &bull; NATIONAL HEADQUARTERS</p>
+            </div>
+          </div>
+          <p class="footer-motto">
+            Forging resolute character, physical endurance, and martial excellence since four decades. 3,000+ championship medals and counting.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-circle" aria-label="Facebook">FB</a>
+            <a href="#" class="social-circle" aria-label="Instagram">IG</a>
+            <a href="#" class="social-circle" aria-label="YouTube">YT</a>
+            <a href="https://wa.me/919999999999" class="social-circle" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-heading">NAVIGATION</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">Heritage &amp; Lineage</a></li>
+            <li><a href="#belts">Rank Syllabus (7 Belts)</a></li>
+            <li><a href="#achievements">3,000+ Medals Vault</a></li>
+            <li><a href="#matcher">Discipline Consultation</a></li>
+            <li><a href="#programs">Academic Disciplines</a></li>
+            <li><a href="#schedule">Weekly Timetable</a></li>
+            <li><a href="#workshops">Hosted Workshops</a></li>
+          </ul>
+        </div>
+
+        <!-- Disciplines -->
+        <div class="footer-col">
+          <h4 class="footer-heading">DISCIPLINES</h4>
+          <ul class="footer-links-list">
+            <li><a href="#programs">Youth Shotokan Karate</a></li>
+            <li><a href="#programs">Youth Combat Kickboxing</a></li>
+            <li><a href="#programs">Adult Pro Kickboxing</a></li>
+            <li><a href="#programs">Strength &amp; Fat Loss</a></li>
+            <li><a href="#programs">Tactical Women's Safety</a></li>
+            <li><a href="#programs">Private Masterclasses</a></li>
+          </ul>
+        </div>
+
+        <!-- Headquarters -->
+        <div class="footer-col">
+          <h4 class="footer-heading">HEADQUARTERS</h4>
+          <div class="footer-contact-details">
+            <p><strong><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Main Dojo:</strong> Central Martial Arts Arena, [City], India</p>
+            <p><strong><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Official Line:</strong> +91 XXXXX XXXXX / +91 XXXXX XXXXX</p>
+            <p><strong><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Admissions:</strong> admissions@uskoindia.com</p>
+            <p><strong><svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Academy Hours:</strong> Mon &ndash; Sat: 06:00 AM &ndash; 09:00 PM<br>Sun: 08:00 AM &ndash; 12:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2024 Universe Shotokan Karate Organisation, India. All Rights Reserved.</p>
+        <p class="footer-subtext">Dedicated to classical Shotokan Karate-do and world-class Kickboxing pedagogy.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Scroll to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+</body>
+</html>
